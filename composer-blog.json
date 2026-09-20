@@ -82,7 +82,7 @@
       "publish": true
     }
   ],
-  "basePath": "/",
+  "basePath": "/typst-composer-pages-test-20260920/",
   "name": "Synthetic Pages UX Test",
   "pages": [
     {
@@ -108,15 +108,15 @@
     },
     {
       "id": "5d1b77b7-f69b-46b1-ae09-1cb8fd5f8ef4",
-      "path": "content/Blog/synthetic-draft/index.typ",
       "kind": "post",
-      "status": "draft",
-      "order": 99
+      "order": 99,
+      "path": "content/Blog/synthetic-draft/index.typ",
+      "status": "draft"
     }
   ],
   "schemaVersion": 1,
   "siteId": "ba813d41bbb60f68",
   "templateVersion": "composer-blog-7",
   "upstream": "9688c47b951c390d25a809dc86bd9748c93282d9",
-  "websiteUrl": ""
+  "websiteUrl": "https://morfisto.github.io/typst-composer-pages-test-20260920"
 }
