@@ -1,0 +1,424 @@
+[
+  {
+    "label": "浅色配色",
+    "fields": [
+      {
+        "path": "colors.light.background",
+        "label": "背景",
+        "type": "color",
+        "default": "#fffff8"
+      },
+      {
+        "path": "colors.light.text",
+        "label": "正文",
+        "type": "color",
+        "default": "#111111"
+      },
+      {
+        "path": "colors.light.heading",
+        "label": "标题",
+        "type": "color",
+        "default": "#111111"
+      },
+      {
+        "path": "colors.light.link",
+        "label": "链接",
+        "type": "color",
+        "default": "#24576a"
+      },
+      {
+        "path": "colors.light.codeBackground",
+        "label": "代码背景",
+        "type": "color",
+        "default": "#f7f7f7"
+      },
+      {
+        "path": "colors.light.border",
+        "label": "边框",
+        "type": "color",
+        "default": "#cccccc"
+      }
+    ]
+  },
+  {
+    "label": "深色配色",
+    "fields": [
+      {
+        "path": "colors.dark.background",
+        "label": "背景",
+        "type": "color",
+        "default": "#151515"
+      },
+      {
+        "path": "colors.dark.text",
+        "label": "正文",
+        "type": "color",
+        "default": "#dddddd"
+      },
+      {
+        "path": "colors.dark.heading",
+        "label": "标题",
+        "type": "color",
+        "default": "#eeeeee"
+      },
+      {
+        "path": "colors.dark.link",
+        "label": "链接",
+        "type": "color",
+        "default": "#8dc4da"
+      },
+      {
+        "path": "colors.dark.codeBackground",
+        "label": "代码背景",
+        "type": "color",
+        "default": "#2d2d2d"
+      },
+      {
+        "path": "colors.dark.border",
+        "label": "边框",
+        "type": "color",
+        "default": "#444444"
+      }
+    ]
+  },
+  {
+    "label": "字体与排版",
+    "fields": [
+      {
+        "path": "type.bodyFont",
+        "label": "正文字体（可含回退字体）",
+        "type": "text",
+        "default": "et-book, Georgia, serif"
+      },
+      {
+        "path": "type.codeFont",
+        "label": "代码字体",
+        "type": "text",
+        "default": "monospace"
+      },
+      {
+        "path": "type.baseSize",
+        "label": "基准字号 px",
+        "type": "number",
+        "default": 14,
+        "min": 10,
+        "max": 28
+      },
+      {
+        "path": "type.lineHeight",
+        "label": "正文行高",
+        "type": "number",
+        "default": 1.5,
+        "min": 1,
+        "max": 2.5,
+        "step": 0.05
+      },
+      {
+        "path": "type.paragraphGap",
+        "label": "段落间距 rem",
+        "type": "number",
+        "default": 1.4,
+        "min": 0,
+        "max": 4,
+        "step": 0.1
+      }
+    ]
+  },
+  {
+    "label": "正文与旁注布局",
+    "fields": [
+      {
+        "path": "layout.maxWidth",
+        "label": "网站最大宽度 px",
+        "type": "number",
+        "default": 1400,
+        "min": 640,
+        "max": 2200
+      },
+      {
+        "path": "layout.textPercent",
+        "label": "正文列宽度 %",
+        "type": "number",
+        "default": 55,
+        "min": 40,
+        "max": 85
+      },
+      {
+        "path": "layout.notePercent",
+        "label": "旁注宽度（相对正文）%",
+        "type": "number",
+        "default": 50,
+        "min": 10,
+        "max": 70
+      },
+      {
+        "path": "layout.noteGap",
+        "label": "旁注间距（相对正文）%",
+        "type": "number",
+        "default": 10,
+        "min": 0,
+        "max": 20
+      }
+    ]
+  },
+  {
+    "label": "主题按钮",
+    "fields": [
+      {
+        "path": "theme.button",
+        "label": "显示主题按钮",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "path": "theme.default",
+        "label": "默认主题",
+        "type": "select",
+        "default": "system",
+        "options": [
+          [
+            "system",
+            "跟随系统"
+          ],
+          [
+            "light",
+            "浅色"
+          ],
+          [
+            "dark",
+            "深色"
+          ]
+        ]
+      },
+      {
+        "path": "theme.lightLabel",
+        "label": "切换浅色文案",
+        "type": "text",
+        "default": "切换到浅色模式"
+      },
+      {
+        "path": "theme.darkLabel",
+        "label": "切换深色文案",
+        "type": "text",
+        "default": "切换到深色模式"
+      }
+    ]
+  },
+  {
+    "label": "文章目录侧栏",
+    "fields": [
+      {
+        "path": "toc.enabled",
+        "label": "生成文章目录",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "path": "toc.depth",
+        "label": "最大标题级别",
+        "type": "number",
+        "default": 3,
+        "min": 2,
+        "max": 6
+      },
+      {
+        "path": "toc.minimum",
+        "label": "至少多少个标题时显示",
+        "type": "number",
+        "default": 3,
+        "min": 1,
+        "max": 30
+      },
+      {
+        "path": "toc.side",
+        "label": "目录位置",
+        "type": "select",
+        "default": "left",
+        "options": [
+          [
+            "left",
+            "左侧"
+          ],
+          [
+            "right",
+            "右侧"
+          ]
+        ]
+      },
+      {
+        "path": "toc.width",
+        "label": "目录宽度 px",
+        "type": "number",
+        "default": 180,
+        "min": 120,
+        "max": 280
+      },
+      {
+        "path": "toc.mobile",
+        "label": "窄屏目录",
+        "type": "select",
+        "default": "hidden",
+        "options": [
+          [
+            "hidden",
+            "不显示"
+          ],
+          [
+            "inline",
+            "正文前显示"
+          ],
+          [
+            "collapsed",
+            "可折叠"
+          ]
+        ]
+      }
+    ]
+  },
+  {
+    "label": "返回顶部",
+    "fields": [
+      {
+        "path": "backTop.enabled",
+        "label": "启用返回顶部",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "path": "backTop.threshold",
+        "label": "显示阈值 px",
+        "type": "number",
+        "default": 300,
+        "min": 0,
+        "max": 3000
+      },
+      {
+        "path": "backTop.side",
+        "label": "按钮位置",
+        "type": "select",
+        "default": "right",
+        "options": [
+          [
+            "left",
+            "左侧"
+          ],
+          [
+            "right",
+            "右侧"
+          ]
+        ]
+      },
+      {
+        "path": "backTop.label",
+        "label": "按钮文案",
+        "type": "text",
+        "default": "返回顶部"
+      }
+    ]
+  },
+  {
+    "label": "代码与公式",
+    "fields": [
+      {
+        "path": "code.lineNumbers",
+        "label": "代码行号",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "path": "code.copy",
+        "label": "代码复制按钮",
+        "type": "boolean",
+        "default": true
+      },
+      {
+        "path": "code.label",
+        "label": "复制代码文案",
+        "type": "text",
+        "default": "Copy"
+      },
+      {
+        "path": "code.success",
+        "label": "复制成功文案",
+        "type": "text",
+        "default": "Copied!"
+      },
+      {
+        "path": "code.failure",
+        "label": "复制失败文案",
+        "type": "text",
+        "default": "复制失败，请选择文本复制"
+      },
+      {
+        "path": "math.copy",
+        "label": "公式复制（MathML / SVG / 文本）",
+        "type": "boolean",
+        "default": true
+      }
+    ]
+  },
+  {
+    "label": "手机旁注与脚注",
+    "fields": [
+      {
+        "path": "notes.mobileOpen",
+        "label": "初始展开",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "path": "notes.exclusive",
+        "label": "一次只展开一条",
+        "type": "boolean",
+        "default": true
+      }
+    ]
+  },
+  {
+    "label": "栏目导航侧栏",
+    "fields": [
+      {
+        "path": "navigation.enabled",
+        "label": "显示栏目导航",
+        "type": "boolean",
+        "default": false
+      },
+      {
+        "path": "navigation.label",
+        "label": "导航标题",
+        "type": "text",
+        "default": "栏目"
+      },
+      {
+        "path": "navigation.side",
+        "label": "位置",
+        "type": "select",
+        "default": "right",
+        "options": [
+          [
+            "left",
+            "左侧"
+          ],
+          [
+            "right",
+            "右侧"
+          ]
+        ]
+      },
+      {
+        "path": "navigation.width",
+        "label": "宽度",
+        "type": "number",
+        "default": 180,
+        "min": 120,
+        "max": 280
+      },
+      {
+        "path": "navigation.mobileOpen",
+        "label": "手机默认展开",
+        "type": "boolean",
+        "default": false
+      }
+    ]
+  }
+]

@@ -1,0 +1,394 @@
+{
+  "schemaVersion": 1,
+  "template": {
+    "id": "composer-blog-html",
+    "name": "Composer 网页内容",
+    "version": "1",
+    "entrypoint": "config.typ"
+  },
+  "groups": [
+    {
+      "id": "blog-content",
+      "label": "网页内容",
+      "order": 25
+    },
+    {
+      "id": "image",
+      "label": "图片",
+      "order": 30
+    }
+  ],
+  "macros": [
+    {
+      "id": "blog-button",
+      "call": "blog-button",
+      "label": "网页按钮",
+      "group": "blog-content",
+      "order": 10,
+      "sidebar": true,
+      "operations": [
+        "insert",
+        "wrap",
+        "edit"
+      ],
+      "template": "#blog-button(\"/\", style: \"filled\")[$selection]",
+      "parameters": [
+        {
+          "name": "dest",
+          "label": "链接地址",
+          "kind": "string",
+          "rawAllowed": true,
+          "position": 0,
+          "required": true
+        },
+        {
+          "name": "body",
+          "label": "正文",
+          "kind": "content",
+          "rawAllowed": true,
+          "position": 1,
+          "bodySlot": true,
+          "required": true
+        },
+        {
+          "name": "style",
+          "label": "样式",
+          "kind": "enum",
+          "rawAllowed": true,
+          "named": true,
+          "values": [
+            {
+              "label": "填充",
+              "value": "\"filled\""
+            },
+            {
+              "label": "描边",
+              "value": "\"outline\""
+            },
+            {
+              "label": "文字",
+              "value": "\"plain\""
+            }
+          ]
+        }
+      ],
+      "componentSource": "/tufted-lib/components.typ",
+      "componentSymbol": "blog-button"
+    },
+    {
+      "id": "blog-image",
+      "inspector": "image",
+      "call": "blog-image",
+      "label": "网页图片与图注",
+      "group": "image",
+      "order": 10,
+      "sidebar": true,
+      "operations": [
+        "insert",
+        "wrap",
+        "edit"
+      ],
+      "template": "#blog-image(\"$cursor\", alt: \"\", width: 100)",
+      "parameters": [
+        {
+          "name": "path",
+          "label": "资源路径",
+          "kind": "file",
+          "rawAllowed": true,
+          "position": 0,
+          "required": true
+        },
+        {
+          "name": "alt",
+          "label": "替代文字",
+          "kind": "string",
+          "rawAllowed": true,
+          "named": true
+        },
+        {
+          "name": "width",
+          "label": "宽度百分比",
+          "kind": "number",
+          "rawAllowed": true,
+          "named": true
+        },
+        {
+          "name": "height",
+          "label": "裁剪高度（像素）",
+          "kind": "number",
+          "rawAllowed": true,
+          "named": true,
+          "disabledValue": "none"
+        },
+        {
+          "name": "fit",
+          "label": "适配",
+          "kind": "enum",
+          "rawAllowed": true,
+          "named": true,
+          "values": [
+            {
+              "label": "完整显示",
+              "value": "\"contain\""
+            },
+            {
+              "label": "裁剪填满",
+              "value": "\"cover\""
+            },
+            {
+              "label": "拉伸",
+              "value": "\"fill\""
+            }
+          ]
+        },
+        {
+          "name": "placement",
+          "label": "布局",
+          "kind": "enum",
+          "rawAllowed": true,
+          "named": true,
+          "values": [
+            {
+              "label": "正文",
+              "value": "\"body\""
+            },
+            {
+              "label": "全宽",
+              "value": "\"full\""
+            },
+            {
+              "label": "旁注",
+              "value": "\"margin\""
+            }
+          ]
+        },
+        {
+          "name": "caption",
+          "label": "图注",
+          "kind": "content",
+          "rawAllowed": true,
+          "named": true
+        }
+      ],
+      "componentSource": "/tufted-lib/components.typ",
+      "componentSymbol": "blog-image"
+    },
+    {
+      "id": "margin-note",
+      "call": "margin-note",
+      "label": "网页旁注",
+      "group": "blog-content",
+      "order": 10,
+      "sidebar": true,
+      "operations": [
+        "insert",
+        "wrap",
+        "edit"
+      ],
+      "template": "#margin-note[$selection]",
+      "parameters": [
+        {
+          "name": "body",
+          "label": "正文",
+          "kind": "content",
+          "rawAllowed": true,
+          "position": 0,
+          "bodySlot": true,
+          "required": true
+        }
+      ],
+      "componentSource": "/tufted-lib/components.typ",
+      "componentSymbol": "margin-note"
+    },
+    {
+      "id": "full-width",
+      "call": "full-width",
+      "label": "网页全宽块",
+      "group": "blog-content",
+      "order": 10,
+      "sidebar": true,
+      "operations": [
+        "insert",
+        "wrap",
+        "edit"
+      ],
+      "template": "#full-width[$selection]",
+      "parameters": [
+        {
+          "name": "body",
+          "label": "正文",
+          "kind": "content",
+          "rawAllowed": true,
+          "position": 0,
+          "bodySlot": true,
+          "required": true
+        }
+      ],
+      "componentSource": "/tufted-lib/components.typ",
+      "componentSymbol": "full-width"
+    },
+    {
+      "id": "blog-footnote",
+      "call": "footnote",
+      "label": "脚注",
+      "group": "blog-content",
+      "order": 10,
+      "sidebar": true,
+      "operations": [
+        "insert",
+        "wrap",
+        "edit"
+      ],
+      "template": "#footnote[$selection]",
+      "parameters": [
+        {
+          "name": "body",
+          "label": "正文",
+          "kind": "content",
+          "rawAllowed": true,
+          "position": 0,
+          "bodySlot": true,
+          "required": true
+        }
+      ]
+    },
+    {
+      "id": "blog-bibliography",
+      "call": "bibliography",
+      "label": "参考文献",
+      "group": "blog-content",
+      "order": 10,
+      "sidebar": true,
+      "operations": [
+        "insert",
+        "wrap",
+        "edit"
+      ],
+      "template": "#bibliography(\"$cursor\")",
+      "parameters": [
+        {
+          "name": "path",
+          "label": "文献文件",
+          "kind": "file",
+          "rawAllowed": true,
+          "position": 0,
+          "required": true
+        },
+        {
+          "name": "title",
+          "label": "标题",
+          "kind": "content",
+          "rawAllowed": true,
+          "named": true
+        },
+        {
+          "name": "style",
+          "label": "引用样式",
+          "kind": "string",
+          "rawAllowed": true,
+          "named": true
+        }
+      ]
+    },
+    {
+      "id": "blog-cite",
+      "call": "cite",
+      "label": "文献引用",
+      "group": "blog-content",
+      "order": 10,
+      "sidebar": true,
+      "operations": [
+        "insert",
+        "wrap",
+        "edit"
+      ],
+      "template": "#cite(label(\"$cursor\"))",
+      "parameters": [
+        {
+          "name": "key",
+          "label": "文献键（标签）",
+          "kind": "raw",
+          "rawAllowed": true,
+          "position": 0,
+          "required": true
+        },
+        {
+          "name": "supplement",
+          "label": "附加页码",
+          "kind": "content",
+          "rawAllowed": true,
+          "named": true
+        }
+      ]
+    },
+    {
+      "id": "blog-ref",
+      "call": "ref",
+      "label": "交叉引用",
+      "group": "blog-content",
+      "order": 10,
+      "sidebar": true,
+      "operations": [
+        "insert",
+        "wrap",
+        "edit"
+      ],
+      "template": "#ref(label(\"$cursor\"))",
+      "parameters": [
+        {
+          "name": "target",
+          "label": "引用目标（标签）",
+          "kind": "raw",
+          "rawAllowed": true,
+          "position": 0,
+          "required": true
+        },
+        {
+          "name": "supplement",
+          "label": "附加说明",
+          "kind": "content",
+          "rawAllowed": true,
+          "named": true
+        }
+      ]
+    },
+    {
+      "id": "figure",
+      "call": "figure",
+      "label": "网页图注",
+      "group": "image",
+      "order": 10,
+      "sidebar": true,
+      "operations": [
+        "insert",
+        "wrap",
+        "edit"
+      ],
+      "template": "#figure($body, caption: [$cursor])",
+      "parameters": [
+        {
+          "name": "body",
+          "label": "正文",
+          "kind": "content",
+          "rawAllowed": true,
+          "position": 0,
+          "bodySlot": true,
+          "required": true
+        },
+        {
+          "name": "caption",
+          "label": "图注",
+          "kind": "content",
+          "rawAllowed": true,
+          "named": true
+        }
+      ],
+      "wrapTargets": [
+        "image"
+      ],
+      "unwrapBodyPosition": 0,
+      "wrapStripPrefix": "#",
+      "unwrapAddPrefix": "#"
+    }
+  ]
+}

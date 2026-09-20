@@ -1,0 +1,122 @@
+{
+  "adapterVersion": 1,
+  "assets": [
+    {
+      "path": "assets/back-to-top.js",
+      "publish": true
+    },
+    {
+      "path": "assets/code-blocks.js",
+      "publish": true
+    },
+    {
+      "path": "assets/custom.css",
+      "publish": true
+    },
+    {
+      "path": "assets/format-headings.js",
+      "publish": true
+    },
+    {
+      "path": "assets/marginnote-toggle.js",
+      "publish": true
+    },
+    {
+      "path": "assets/math-copy.js",
+      "publish": true
+    },
+    {
+      "path": "assets/theme-toggle.js",
+      "publish": true
+    },
+    {
+      "path": "assets/theme.css",
+      "publish": true
+    },
+    {
+      "path": "assets/toc.js",
+      "publish": true
+    },
+    {
+      "path": "assets/TUFTE-LICENSE",
+      "publish": true
+    },
+    {
+      "path": "assets/tufte.css",
+      "publish": true
+    },
+    {
+      "path": "assets/tufted.css",
+      "publish": true
+    },
+    {
+      "path": "assets/et-book/LICENSE",
+      "publish": true
+    },
+    {
+      "path": "assets/et-book/et-book-bold-line-figures/et-book-bold-line-figures.woff",
+      "publish": true
+    },
+    {
+      "path": "assets/et-book/et-book-display-italic-old-style-figures/et-book-display-italic-old-style-figures.woff",
+      "publish": true
+    },
+    {
+      "path": "assets/et-book/et-book-roman-line-figures/et-book-roman-line-figures.woff",
+      "publish": true
+    },
+    {
+      "path": "assets/et-book/et-book-roman-old-style-figures/et-book-roman-old-style-figures.woff",
+      "publish": true
+    },
+    {
+      "path": "assets/responsive.css",
+      "publish": true
+    },
+    {
+      "path": "assets/content-overflow.js",
+      "publish": true
+    },
+    {
+      "path": "assets/ux-test.svg",
+      "publish": true
+    }
+  ],
+  "basePath": "/",
+  "name": "Synthetic Pages UX Test",
+  "pages": [
+    {
+      "id": "4db3d881b8ef76c9",
+      "kind": "home",
+      "order": 0,
+      "path": "content/index.typ",
+      "status": "published"
+    },
+    {
+      "id": "60a3f5fedd885c52",
+      "kind": "section",
+      "order": 1,
+      "path": "content/Blog/index.typ",
+      "status": "published"
+    },
+    {
+      "id": "1d4aae66f17c17d6",
+      "kind": "post",
+      "order": 2,
+      "path": "content/Blog/first-post/index.typ",
+      "status": "draft"
+    },
+    {
+      "id": "5d1b77b7-f69b-46b1-ae09-1cb8fd5f8ef4",
+      "path": "content/Blog/synthetic-draft/index.typ",
+      "kind": "post",
+      "status": "draft",
+      "order": 99
+    }
+  ],
+  "schemaVersion": 1,
+  "siteId": "ba813d41bbb60f68",
+  "templateVersion": "composer-blog-7",
+  "upstream": "9688c47b951c390d25a809dc86bd9748c93282d9",
+  "websiteUrl": ""
+}
